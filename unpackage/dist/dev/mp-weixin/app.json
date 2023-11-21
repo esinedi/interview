@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/index",
+    "pages/list/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTitleText": "面试葱",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "面试葱",
+        "iconPath": "static/img/tabBar/index.png",
+        "selectedIconPath": "static/img/tabBar/index-run.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "static/img/tabBar/mine.png",
+        "selectedIconPath": "static/img/tabBar/mine-run.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

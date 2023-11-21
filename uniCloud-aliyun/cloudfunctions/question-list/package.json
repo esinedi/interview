@@ -1,0 +1,7 @@
+{
+  "name": "question-list",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}
