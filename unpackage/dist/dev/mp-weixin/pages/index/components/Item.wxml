@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['handleClickList']]]]}}" class="item data-v-6bc66926" bindtap="__e"><image class="item-img data-v-6bc66926" src="{{item.icon}}" mode="heightFix"></image><text class="item-text data-v-6bc66926">{{item.name}}</text></view>

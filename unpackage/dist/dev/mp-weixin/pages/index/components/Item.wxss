@@ -1,0 +1,16 @@
+.item.data-v-6bc66926 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 0.5rpx solid rgba(0, 0, 0, 0.2);
+}
+.item .item-img.data-v-6bc66926 {
+  height: 130rpx;
+}
+.item .item-text.data-v-6bc66926 {
+  margin-top: 10rpx;
+  font-size: 16rpx;
+}
+

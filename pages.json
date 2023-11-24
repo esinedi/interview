@@ -50,7 +50,8 @@
 		"navigationBarTitleText": "面试葱",
 		"navigationBarBackgroundColor": "#000",
 		"navigationBarTextStyle": "white",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"navigationStyle": "custom" // 设置导航栏样式为自定义
 	},
 	"uniIdRouter": {},
 	"condition" : { //模式配置，仅开发期间生效

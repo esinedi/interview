@@ -21,5 +21,11 @@ exports.main = async (event, context) => {
 	}
 	
 	//返回数据给客户端
-	return res.data
+	return {
+		code: 200,
+		msg: '获取成功',
+		data: {
+			result: res.data
+		}
+	}
 };

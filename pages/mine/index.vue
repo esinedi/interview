@@ -1,9 +1,103 @@
 <template>
-	<view class="content"></view>
+	<view class="content">
+		<!-- 导航栏 -->
+		<custom-navbar title="我的" :showBack="false"></custom-navbar>
+		<view class="login" v-if="user.openid === undefined">
+			<button type="primary" @click="login">请登录</button>
+		</view>
+		<view class="main" v-else>
+			<view class="user">
+				<image class="user-image" :src="user.avatarUrl" mode="widthFix"></image>
+				<view class="user-name">
+					{{ user.nickName }}
+				</view>
+			</view>
+			<uni-list>
+				<uni-list-item title="我的收藏" :showArrow="true" to="/pages/list/index?name=我的收藏&type_id=-2"></uni-list-item>
+			</uni-list>
+		</view>
+	</view>
 </template>
 
 <script>
+	// import { mixin } from "../../common/mixin.js"
+	export default {
+		// mixins: [ mixin ], //混入文件
+		data () {
+			return {
+				user: {
+					avatarUrl: '',
+					nickName: ''
+				}
+			}
+		},
+		onLoad() {
+			this.user = uni.getStorageSync('userInfo')
+		},
+		methods: {
+			login() {
+				this.wxLogin()
+			},
+			wxLogin () {
+				let _this = this;
+				let code;
+				uni.login({
+					provider: 'weixin',
+					success: res => {
+						code = res.code;//获取登录需要的code
+					}
+				});
+				uni.getUserProfile({
+					desc: '获取你的昵称，头像',
+					lang: 'zh_CN',
+					success: res => {
+						uni.showLoading();
+						let data = res.userInfo;//授权拿到用户信息
+						data.code = code;
+						// 调用登录云函数
+						_this.$cloudApi.call({
+							name: 'weixin-login',
+							data,
+							success: res => {
+								this.user = res.userInfo
+								uni.setStorageSync('token', res.token);
+								uni.setStorageSync('userInfo', res.userInfo);
+							}
+						});
+					}
+				});
+			}
+		}
+	}
 </script>
 
 <style lang="less" scoped>
+	.content {
+		width: 100vw;
+		height: 100vh;
+		background: #f0f0f0;
+		.login {
+			margin: 30% auto;
+			width: 30%;
+		}
+		.main {
+			margin-top: 20rpx;
+			padding-top: 30rpx;
+			background: #fff;
+			.user{
+				margin-bottom: 40rpx;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				.user-image {
+					width: 150rpx;
+					height: 150rpx;
+					border-radius: 100%;
+				}
+				.user-name {
+					margin-top: 10rpx;
+				}
+			}
+		}
+	}
 </style>

@@ -2,17 +2,4 @@
   display: flex;
   flex-direction: column;
 }
-.content .item .item-title.data-v-49d770da {
-  padding: 10rpx 20rpx;
-  background: #1a73e8;
-  color: #fff;
-  font-size: 16rpx;
-  overflow: hidden;
-}
-.content .item .item-title .item-name.data-v-49d770da {
-  float: right;
-}
-.content .item .item-main.data-v-49d770da {
-  padding: 30rpx 50rpx;
-}
 

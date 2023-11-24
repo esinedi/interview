@@ -23,7 +23,7 @@
 
 <script>
 	export default {
-		name: 'Item',
+		name: 'ListItem',
 		data() {
 			return {
 				

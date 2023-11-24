@@ -2,14 +2,16 @@
   "pages": [
     "pages/index/index",
     "pages/mine/index",
-    "pages/list/index"
+    "pages/list/index",
+    "pages/detail/index"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTitleText": "面试葱",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#000",
@@ -31,5 +33,7 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "custom-navbar": "/components/CustomNavbar/index"
+  }
 }
