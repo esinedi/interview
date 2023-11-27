@@ -9,7 +9,6 @@ const {
 const db = uniCloud.database();
 const users = db.collection('users');
 exports.main = async (event, context) => {
-	
 	const {
 		code,
 		avatarUrl,
@@ -26,7 +25,6 @@ exports.main = async (event, context) => {
 	// 1，判断是否有用户
 	const { data: { openid } } = res
 	const countRes = await users.where({openid}).get()
-	console.log(countRes);
 	let model = 0
 	// 2，没有则添加用户
 	if(countRes.data.length < 1) {

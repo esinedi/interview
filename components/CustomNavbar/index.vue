@@ -1,12 +1,12 @@
 <template>
-	<view>
+	<view v-if="title !== ''">
 		<view :style="{ height: statusBarHeight + navBarHeight + 'px'}"></view>
 		<view class="custom-fixed">
 			<view :style="{ height: statusBarHeight + 'px'}"></view>
 			<!-- 全局自定义导航栏 -->
 			<view class="custom-navbar" :style="{ height: navBarHeight + 'px'}">
 				<view class="back-btn" v-if="showBack" @click="navigateBack">
-					<image class="back-btn-img" src="@/static/img/navbar/back.png" mode="heightFix"></image>
+					<image class="back-btn-img" src="@/static/img/navbar/back.png" mode="aspectFit"></image>
 				</view>
 				<view class="title">{{ title }}</view>
 			</view>
@@ -25,7 +25,10 @@ export default {
 		}
 	},
 	props: {
-		title: String, // 标题文字
+		title: {
+			type: String,
+			default: '' // 标题文字
+		},
 		showBack: {
 			type: Boolean,
 			default: true // 是否显示返回按钮，默认为 true
@@ -76,9 +79,10 @@ export default {
 	padding: 0 30rpx;
 	.back-btn {
 		margin-right: 30rpx;
-		height: 45%;
+		height: 40rpx;
 		.back-btn-img {
-			height: 100%;
+			width: 24rpx;
+			height: 40rpx;
 		}
 	}
 	.title {

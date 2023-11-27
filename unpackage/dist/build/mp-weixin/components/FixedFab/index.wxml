@@ -1,0 +1,1 @@
+<uni-fab class="vue-ref" vue-id="025dad56-1" pattern="{{pattern}}" content="{{content}}" popMenu="{{active}}" horizontal="right" vertical="bottom" data-ref="fab" data-event-opts="{{[['^trigger',[['trigger']]]]}}" bind:trigger="__e" bind:__l="__l"></uni-fab>

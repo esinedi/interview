@@ -11,6 +11,7 @@
 					openid: openid
 				},
 				success: res => {
+					console.log(res);
 					if (!res.result.token) {
 						uni.removeStorageSync('token');
 						uni.removeStorageSync('userInfo');

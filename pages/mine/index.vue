@@ -23,9 +23,7 @@
 </template>
 
 <script>
-	// import { mixin } from "../../common/mixin.js"
 	export default {
-		// mixins: [ mixin ], //混入文件
 		data () {
 			return {
 				user: {
@@ -65,19 +63,19 @@
 						code = res.code;//获取登录需要的code
 					}
 				});
-				uni.getUserProfile({
-					desc: '获取你的昵称，头像',
-					lang: 'zh_CN',
+				uni.getUserInfo({
+					provider: 'weixin',
 					success: res => {
-						uni.showLoading();
+						// uni.showLoading();
 						let data = res.userInfo;//授权拿到用户信息
 						data.code = code;
+						console.log(data);
 						// 调用登录云函数
-						_this.$cloudApi.call({
+						this.$cloudApi.call({
 							name: 'weixin-login',
 							data,
 							success: res => {
-								this.user = res.userInfo
+								_this.user = res.userInfo
 								uni.setStorageSync('token', res.token);
 								uni.setStorageSync('userInfo', res.userInfo);
 							}

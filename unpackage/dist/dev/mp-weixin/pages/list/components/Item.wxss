@@ -11,6 +11,7 @@
 }
 .item .item-title .item-level .item-show image.data-v-92126cd8 {
   width: 20rpx;
+  height: 20rpx;
 }
 .item .item-title .item-name.data-v-92126cd8 {
   float: right;

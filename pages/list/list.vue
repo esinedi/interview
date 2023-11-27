@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<!-- 导航栏 -->
-		<custom-navbar :title="option.name"></custom-navbar>
+		<custom-navbar :title="option.name" :showBack="false"></custom-navbar>
 		<!-- 搜索框 -->
 		<view class="input-top">
 			<uni-search-bar v-model="option.search" @confirm="searchText">

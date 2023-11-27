@@ -102,7 +102,7 @@ var components
 try {
   components = {
     uniFav: function () {
-      return Promise.all(/*! import() | uni_modules/uni-fav/components/uni-fav/uni-fav */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-fav/components/uni-fav/uni-fav")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-fav/components/uni-fav/uni-fav.vue */ 146))
+      return Promise.all(/*! import() | uni_modules/uni-fav/components/uni-fav/uni-fav */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-fav/components/uni-fav/uni-fav")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-fav/components/uni-fav/uni-fav.vue */ 162))
     },
   }
 } catch (e) {
@@ -167,12 +167,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var Answer = function Answer() {
   __webpack_require__.e(/*! require.ensure | pages/detail/components/Answer */ "pages/detail/components/Answer").then((function () {
-    return resolve(__webpack_require__(/*! ./components/Answer.vue */ 157));
+    return resolve(__webpack_require__(/*! ./components/Answer.vue */ 173));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var FixedFab = function FixedFab() {
   __webpack_require__.e(/*! require.ensure | components/FixedFab/index */ "components/FixedFab/index").then((function () {
-    return resolve(__webpack_require__(/*! @/components/FixedFab/index.vue */ 164));
+    return resolve(__webpack_require__(/*! @/components/FixedFab/index.vue */ 180));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 var _default = {

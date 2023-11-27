@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['handleClickList']]]]}}" hidden="{{!($root.g0!==0)}}" class="item data-v-f00a8178" bindtap="__e"><image class="item-img data-v-f00a8178" src="{{item.icon}}" mode="aspectFit"></image><text class="item-text data-v-f00a8178">{{item.name}}</text></view>

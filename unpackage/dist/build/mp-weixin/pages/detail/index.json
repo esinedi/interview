@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "面试题",
+  "usingComponents": {
+    "uni-fav": "/uni_modules/uni-fav/components/uni-fav/uni-fav",
+    "answer": "/pages/detail/components/Answer",
+    "fixed-fab": "/components/FixedFab/index"
+  }
+}

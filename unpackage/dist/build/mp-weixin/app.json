@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/index",
+    "pages/list/list",
+    "pages/list/index",
+    "pages/detail/index",
+    "pages/about/index",
+    "pages/contact/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTitleText": "面试葱",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "面试葱",
+        "iconPath": "static/img/tabBar/index.png",
+        "selectedIconPath": "static/img/tabBar/index-run.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "题库",
+        "iconPath": "static/img/tabBar/question.png",
+        "selectedIconPath": "static/img/tabBar/question-run.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "static/img/tabBar/mine.png",
+        "selectedIconPath": "static/img/tabBar/mine-run.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "custom-navbar": "/components/CustomNavbar/index"
+  }
+}

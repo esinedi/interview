@@ -1,8 +1,10 @@
 <template>
 	<view
 		class="item"
-		@click="handleClickList()">
-		<image class="item-img" :src="item.icon" mode="heightFix"></image>
+		@click="handleClickList()"
+		v-show="Object.keys(item).length !== 0"
+		>
+		<image class="item-img" :src="item.icon" mode="aspectFit"></image>
 		<text class="item-text">{{ item.name }}</text>
 	</view>
 </template>
@@ -39,6 +41,7 @@
 		height: 100%;
 		border: 0.5rpx solid rgba(0, 0, 0, 0.2);
 		.item-img {
+			max-width: 130rpx;
 			height: 130rpx;
 		}
 		.item-text {

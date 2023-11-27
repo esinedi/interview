@@ -102,10 +102,10 @@ var components
 try {
   components = {
     uniList: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 114))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 130))
     },
     uniListItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 121))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 137))
     },
   }
 } catch (e) {
@@ -192,9 +192,7 @@ exports.default = void 0;
 //
 //
 //
-// import { mixin } from "../../common/mixin.js"
 var _default = {
-  // mixins: [ mixin ], //混入文件
   data: function data() {
     return {
       user: {
@@ -236,19 +234,19 @@ var _default = {
         }
       });
 
-      uni.getUserProfile({
-        desc: '获取你的昵称，头像',
-        lang: 'zh_CN',
+      uni.getUserInfo({
+        provider: 'weixin',
         success: function success(res) {
-          uni.showLoading();
+          // uni.showLoading();
           var data = res.userInfo; //授权拿到用户信息
           data.code = code;
+          console.log(data);
           // 调用登录云函数
-          _this.$cloudApi.call({
+          _this2.$cloudApi.call({
             name: 'weixin-login',
             data: data,
             success: function success(res) {
-              _this2.user = res.userInfo;
+              _this.user = res.userInfo;
               uni.setStorageSync('token', res.token);
               uni.setStorageSync('userInfo', res.userInfo);
             }

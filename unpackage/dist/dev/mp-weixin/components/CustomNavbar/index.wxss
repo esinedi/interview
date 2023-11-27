@@ -15,10 +15,11 @@
 }
 .custom-navbar .back-btn.data-v-186f7abf {
   margin-right: 30rpx;
-  height: 45%;
+  height: 40rpx;
 }
 .custom-navbar .back-btn .back-btn-img.data-v-186f7abf {
-  height: 100%;
+  width: 24rpx;
+  height: 40rpx;
 }
 .custom-navbar .title.data-v-186f7abf {
   color: #fff;

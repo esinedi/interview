@@ -10,6 +10,7 @@ function call(option) {
 			name: option.name,
 			data: option.data,
 			success: (res) => {
+				console.log(res);
 				uni.hideLoading();
 				if (res.result.code == 200) {
 					if (res.result.data.token) {
@@ -19,10 +20,6 @@ function call(option) {
 					if (option.success) option.success(res.result.data);
 					resolve(res.result.data);
 				} else if(res.result.code == 201) {
-					uni.showToast({
-						icon: 'none',
-						title: res.result.msg
-					})
 					if (option.fail) option.fail(res);
 				} else if(res.result.code == 203) {
 					// uni.clearStorageSync();
@@ -38,12 +35,13 @@ function call(option) {
 				}
 			},
 			fail: (err) => {
+				console.log(err);
 				uni.hideLoading();
 				if (option.fail) option.fail(err);
 				reject();
 			},
 			complete: () => {
-				uni.hideLoading();
+				// uni.hideLoading();
 				if (option.complete) option.complete();
 			}
 		});

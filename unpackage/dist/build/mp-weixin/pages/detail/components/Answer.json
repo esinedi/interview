@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "zero-markdown-view": "/uni_modules/zero-markdown-view/components/zero-markdown-view/zero-markdown-view"
+  },
+  "component": true
+}

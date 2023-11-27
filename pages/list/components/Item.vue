@@ -1,14 +1,14 @@
 <template>
 	<view class="item" @click="handleDetail(item._id)">
-		<view class="item-title">
+		<view class="item-title" v-if="Object.keys(item).length !== 0">
 			<view class="item-level">
 				<view class="item-span">
 					难度：
 				</view>
 				<view class="item-show">
-					<image v-for="i in Math.floor(item.level % 5)" :key="'shi' + i" src="../../../static/img/list/1.png" mode="widthFix"></image>
-					<image v-show="(item.level - Math.trunc(item.level)) > 0" src="../../../static/img/list/0.5.png" mode="widthFix"></image>
-					<image v-for="i in (5 - Math.ceil(item.level % 5))" :key="'kong' + i" src="../../../static/img/list/0.png" mode="widthFix"></image>
+					<image v-for="i in Math.floor(item.level % 5)" :key="'shi' + i" src="../../../static/img/list/1.png" mode="aspectFit"></image>
+					<image v-show="(item.level - Math.trunc(item.level)) > 0" src="../../../static/img/list/0.5.png" mode="aspectFit"></image>
+					<image v-for="i in (5 - Math.ceil(item.level % 5))" :key="'kong' + i" src="../../../static/img/list/0.png" mode="aspectFit"></image>
 				</view>
 			</view>
 			<view class="item-name">
@@ -59,6 +59,7 @@
 				.item-show {
 					image {
 						width: 20rpx;
+						height: 20rpx;
 					}
 				}
 			}
