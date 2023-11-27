@@ -1,0 +1,12 @@
+.content.data-v-57bb4cfa {
+  padding: 80rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.content .wx-block.data-v-57bb4cfa {
+  margin-bottom: 30rpx;
+}
+.content .wx-block .wx-QR.data-v-57bb4cfa {
+  width: 100%;
+}
+

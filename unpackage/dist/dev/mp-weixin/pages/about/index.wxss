@@ -1,0 +1,30 @@
+.content.data-v-5357e832 {
+  padding: 30rpx;
+}
+.content .main .main-text.data-v-5357e832 {
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  line-height: 46rpx;
+  text-align: justify;
+}
+.content .main .button-text.data-v-5357e832 {
+  color: red;
+  text-decoration: underline;
+  /* 文本下划线样式 */
+}
+.message-main.data-v-5357e832 {
+  padding: 30rpx;
+  padding-top: 150rpx;
+  background: #fff;
+}
+.message-main .message-scroll.data-v-5357e832 {
+  height: 600rpx;
+}
+.message-main .message-title.data-v-5357e832,
+.message-main .message-section-title.data-v-5357e832 {
+  font-weight: bold;
+}
+.message-main .message-black.data-v-5357e832 {
+  margin-bottom: 30rpx;
+}
+

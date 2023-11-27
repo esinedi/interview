@@ -13,7 +13,10 @@
 				</view>
 			</view>
 			<uni-list>
-				<uni-list-item title="我的收藏" :showArrow="true" to="/pages/list/index?name=我的收藏&type_id=-2"></uni-list-item>
+				<uni-list-item :showArrow="true" title="我的收藏" to="/pages/list/index?name=我的收藏&type_id=-2"></uni-list-item>
+				<uni-list-item :showArrow="true" title="关于我们" to="/pages/about/index"></uni-list-item>
+				<uni-list-item :showArrow="true" title="联系我们" to="/pages/contact/index"></uni-list-item>
+				<uni-list-item :showArrow="true" title="退出登录" clickable="true" @click="exit"></uni-list-item>
 			</uni-list>
 		</view>
 	</view>
@@ -35,6 +38,21 @@
 			this.user = uni.getStorageSync('userInfo')
 		},
 		methods: {
+			exit() {
+				uni.showModal({
+					title: '温馨提示',
+					content: '是否退出登录？',
+					success(res) {
+						uni.reLaunch({
+							url:'/pages/mine/index',
+							success() {
+								uni.removeStorageSync('token');
+								uni.removeStorageSync('userInfo');
+							}
+						})
+					}
+				})
+			},
 			login() {
 				this.wxLogin()
 			},

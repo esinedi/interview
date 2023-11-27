@@ -1,4 +1,5 @@
 'use strict';
+// 获取用户收藏的面试题
 const { verifyToken } = require("wx-common");
 const db = uniCloud.database();
 const collectMsg = db.collection('user-collect');

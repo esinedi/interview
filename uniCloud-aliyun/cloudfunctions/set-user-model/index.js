@@ -1,4 +1,5 @@
 'use strict';
+// 获取用户模式
 const { verifyToken } = require("wx-common");
 const db = uniCloud.database();
 const users = db.collection('users');

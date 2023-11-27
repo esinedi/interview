@@ -13,6 +13,13 @@
 			}
 		},
 		{
+			"path": "pages/list/list",
+			"style": {
+				"navigationBarTitleText": "题库",
+				"onReachBottomDistance": 150
+			}
+		},
+		{
 			"path": "pages/list/index",
 			"style": {
 				"navigationBarTitleText": "列表",
@@ -23,6 +30,22 @@
 			"path": "pages/detail/index",
 			"style": {
 				"navigationBarTitleText": "面试题"
+			}
+		},
+		{
+			"path" : "pages/about/index",
+			"style" : 
+			{
+				"navigationBarTitleText" : "关于我们",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/contact/index",
+			"style" : 
+			{
+				"navigationBarTitleText" : "联系我们",
+				"enablePullDownRefresh" : false
 			}
 		}
 	],
@@ -37,6 +60,12 @@
 				"text": "面试葱",
 				"iconPath": "static/img/tabBar/index.png",
 				"selectedIconPath": "static/img/tabBar/index-run.png"
+			},
+			{
+				"pagePath": "pages/list/list",
+				"text": "题库",
+				"iconPath": "static/img/tabBar/question.png",
+				"selectedIconPath": "static/img/tabBar/question-run.png"
 			},
 			{
 				"pagePath": "pages/mine/index",

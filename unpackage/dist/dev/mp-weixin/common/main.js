@@ -24,7 +24,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 var CustomNavbar = function CustomNavbar() {
   __webpack_require__.e(/*! require.ensure | components/CustomNavbar/index */ "components/CustomNavbar/index").then((function () {
-    return resolve(__webpack_require__(/*! @/components/CustomNavbar */ 81));
+    return resolve(__webpack_require__(/*! @/components/CustomNavbar */ 89));
   }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
 };
 // 注册全局组件

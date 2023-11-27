@@ -1,6 +1,7 @@
 'use strict';
+// 获取面试题类型
+const db = uniCloud.database();
 exports.main = async (event, context) => {
-	const db = uniCloud.database();
 	const res = await db.collection('type-question').get()
 	
 	//返回数据给客户端

@@ -102,10 +102,10 @@ var components
 try {
   components = {
     uniList: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 210))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 114))
     },
     uniListItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 217))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 121))
     },
   }
 } catch (e) {
@@ -189,6 +189,9 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
 // import { mixin } from "../../common/mixin.js"
 var _default = {
   // mixins: [ mixin ], //混入文件
@@ -204,6 +207,21 @@ var _default = {
     this.user = uni.getStorageSync('userInfo');
   },
   methods: {
+    exit: function exit() {
+      uni.showModal({
+        title: '温馨提示',
+        content: '是否退出登录？',
+        success: function success(res) {
+          uni.reLaunch({
+            url: '/pages/mine/index',
+            success: function success() {
+              uni.removeStorageSync('token');
+              uni.removeStorageSync('userInfo');
+            }
+          });
+        }
+      });
+    },
     login: function login() {
       this.wxLogin();
     },

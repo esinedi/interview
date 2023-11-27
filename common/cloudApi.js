@@ -1,6 +1,5 @@
-let token = uni.getStorageSync('token');
-
 function call(option) {
+	let token = uni.getStorageSync('token');
 	return new Promise((resolve, reject) => {
 		if (!option.data) option.data = {};
 		if (token) option.data.token = token;

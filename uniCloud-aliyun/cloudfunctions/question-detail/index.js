@@ -1,4 +1,5 @@
 'use strict';
+// 获取面试题详情
 const { verifyToken } = require("wx-common");
 const db = uniCloud.database();
 exports.main = async (event, context) => {

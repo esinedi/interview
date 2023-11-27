@@ -1,4 +1,5 @@
 'use strict';
+// 登录小程序判断 token 是否过期，没过期刷新 token
 const {
 	getToken,
 	verifyToken

@@ -1,4 +1,5 @@
 'use strict';
+// 微信小程序登录
 const {
 	appId,
 	secret,
@@ -24,16 +25,20 @@ exports.main = async (event, context) => {
 	// 操控数据库
 	// 1，判断是否有用户
 	const { data: { openid } } = res
-	const countRes = await users.where({openid}).count()
+	const countRes = await users.where({openid}).get()
+	console.log(countRes);
+	let model = 0
 	// 2，没有则添加用户
-	if(countRes.total !== 1 ) {
+	if(countRes.data.length < 1) {
 		users.add({
 			openid,
 			avatarUrl,
 			gender,
 			nickName,
-			model: 0
+			model
 		})
+	}else {
+		model = countRes.data[0].model
 	}
 	// 生成token
 	const token = getToken(openid)
@@ -41,7 +46,8 @@ exports.main = async (event, context) => {
 		openid,
 		avatarUrl,
 		gender,
-		nickName
+		nickName,
+		model
 	}
 	//返回数据给客户端
 	return {

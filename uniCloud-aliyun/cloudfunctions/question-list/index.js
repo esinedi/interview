@@ -1,6 +1,7 @@
 'use strict';
+// 获取面试题列表
+const db = uniCloud.database();
 exports.main = async (event, context) => {
-	const db = uniCloud.database();
 	let res
 	if (event.type_id == -1) {
 		res = await db.collection('fe-question')
