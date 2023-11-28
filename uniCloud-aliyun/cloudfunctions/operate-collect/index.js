@@ -14,12 +14,12 @@ exports.main = async (event, context) => {
 	}
 	if(token) {
 		if(!event.collect) {
-			userCollect.add({
+			await userCollect.add({
 				openid: event.openid,
 				feid: event.feid
 			})
 		}else {
-			userCollect.where({
+			await userCollect.where({
 				openid: event.openid,
 				feid: event.feid
 			}).remove()

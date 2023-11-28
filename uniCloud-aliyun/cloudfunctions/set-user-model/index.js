@@ -11,7 +11,7 @@ exports.main = async (event, context) => {
 		data: {}
 	}
 	if(token) {
-		users.where({openid: event.openid}).update({
+		await users.where({openid: event.openid}).update({
 			model: event.model
 		})
 	}else {

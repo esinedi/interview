@@ -41,13 +41,13 @@
 					title: '温馨提示',
 					content: '是否退出登录？',
 					success(res) {
-						uni.reLaunch({
-							url:'/pages/mine/index',
-							success() {
-								uni.removeStorageSync('token');
-								uni.removeStorageSync('userInfo');
-							}
-						})
+						if(res.confirm) {
+							uni.removeStorageSync('token');
+							uni.removeStorageSync('userInfo');
+							uni.reLaunch({
+								url:'/pages/mine/index'
+							})
+						}
 					}
 				})
 			},

@@ -28,7 +28,7 @@ exports.main = async (event, context) => {
 	let model = 0
 	// 2，没有则添加用户
 	if(countRes.data.length < 1) {
-		users.add({
+		await users.add({
 			openid,
 			avatarUrl,
 			gender,

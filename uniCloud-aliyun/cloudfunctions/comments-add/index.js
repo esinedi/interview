@@ -27,7 +27,7 @@ exports.main = async (event, context) => {
 	}
 	
 	if(token) {
-		comments.add({
+		await comments.add({
 			feid,
 			openid,
 			targetOpenid,

@@ -210,13 +210,13 @@ var _default = {
         title: '温馨提示',
         content: '是否退出登录？',
         success: function success(res) {
-          uni.reLaunch({
-            url: '/pages/mine/index',
-            success: function success() {
-              uni.removeStorageSync('token');
-              uni.removeStorageSync('userInfo');
-            }
-          });
+          if (res.confirm) {
+            uni.removeStorageSync('token');
+            uni.removeStorageSync('userInfo');
+            uni.reLaunch({
+              url: '/pages/mine/index'
+            });
+          }
         }
       });
     },
